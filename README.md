@@ -1,50 +1,88 @@
-# Welcome to your Expo app 👋
+# React Native Exercises Project
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto contém uma série de exercícios para praticar conceitos básicos e intermediários de React Native, incluindo componentes funcionais, props, listas, hooks, e estilização.
 
-## Get started
 
-1. Install dependencies
+## Atividades realizadas
 
-   ```bash
-   npm install
-   ```
+### 1) Componente `Greeting`
+- Criado um componente funcional chamado `Greeting` que renderiza uma mensagem de saudação.
+- Implementado em duas formas:
+  - Utilizando função tradicional.
+  - Utilizando arrow function.
+- Adicionada estilização básica com `style`.
 
-2. Start the app
+### 2) Props no `Greeting`
+- Modificado o componente `Greeting` para aceitar as props `name` e `age`.
+- Exibe essas informações junto com a mensagem.
+- Adicionado o tipo `GreetingProps` para tipagem.
 
-   ```bash
-   npx expo start
-   ```
+### 3) Lista de strings com componentes `ListContainer` e `ListItem`
+- Criada uma lista constante de strings.
+- Componente pai `ListContainer` transforma a lista em componentes filhos `ListItem`.
+- Cada `ListItem` exibe o índice do item e o texto original.
+- Estilização aplicada usando Tailwind CSS.
+- Uso da função `map` para renderizar os itens.
 
-In the output, you'll find options to open the app in a
+### 4) Lista de objetos com múltiplos atributos
+- Modificada a lista anterior para trabalhar com uma lista de objetos.
+- Cada objeto tem pelo menos dois atributos (ex: nome da matéria e nota).
+- `ListContainer` e `ListItem` atualizados para exibir os atributos do objeto.
+- Adicionado tipo para os objetos da lista.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 5) Componente `Countdown`
+- Criado um componente `Countdown` que decrementa um valor de 10 a 0 a cada clique em um botão.
+- Exibe mensagem no console a cada clique.
+- Utiliza hooks `useState` e `useEffect`.
+- Botão é desativado quando o valor chega a 0.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 6) Componente `Random`
+- Criado componente que sorteia um número de 0 a 100 e exibe na tela ao clicar no botão.
+- Utilizado hook `useState`.
+- **6a)** Alterado para sortear um item em uma lista recebida por props.
 
-## Get a fresh project
+### 7) Componente `ToggleText`
+- Componente que alterna entre dois textos diferentes ao clicar em um botão.
+- Estilização básica adicionada via CSS.
 
-When you're ready, run:
+### 8) Componente `CheckText`
+- Componente com uma checkbox e um texto.
+- Ao marcar a checkbox, o texto fica riscado.
+- Ao desmarcar, o texto volta ao normal.
+- Implementado com o componente `Checkbox` do `expo-checkbox`.
 
+
+
+## Tecnologias utilizadas
+
+- React Native
+- TypeScript
+- Hooks (`useState`, `useEffect`)
+- Expo (para suporte a componentes como `Checkbox`)
+
+
+## Como rodar o projeto
+
+1. Clone o repositório  
 ```bash
-npm run reset-project
+git clone <url-do-repositorio>
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Instale as dependências
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Execute o projeto com Expo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+## Estrutura do projeto
+`/components` — componentes reutilizáveis como Greeting, ListContainer, ListItem, Countdown, Random, ToggleText, CheckText.
 
-Join our community of developers creating universal apps.
+`/screens` — telas principais do app (ex: tabs Home e Explore, Exercises).
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+`/assets` — imagens e ícones.
