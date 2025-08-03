@@ -1,7 +1,3 @@
-/* 1. Crie um componente funcional chamado "Greeting" 
-que renderiza uma mensagem de saudação. 
-Adicione uma estilização básica do componente, com style. */
-
 import React from "react";
 import { StyleSheet } from "react-native";
 import { ThemedText } from "../ThemedText";
